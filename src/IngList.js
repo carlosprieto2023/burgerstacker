@@ -1,26 +1,29 @@
 import React, { Component } from "react";
-import Ingridient from "./Ingridient";
+import Ingredient from "./Ingredient";
 
 
 export default class IngList extends Component {
 
     render() {
-        console.log("props inside INGList", this.props)
-        const { ingredients } = this.props
+        // console.log("props inside INGList", this.props)
+        const { ingredients, add } = this.props
 
         let allIng = ingredients.map((ing, i) => (
             <li key={i}>
-                <Ingridient ingredient={ing} />
+                <Ingredient
+                    ingredient={ing}
+                    clickFunc={add}
+                />
             </li>
         ))
 
         return (
-            <div>
-                <h2>Ingredient List</h2>
+            <section className="pane">
+                <h3>Ingredient List</h3>
                 <ul>
                     {allIng}
                 </ul>
-            </div>
+            </section>
         )
     }
 }
