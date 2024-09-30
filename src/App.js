@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import BurgerStacker from './BurgerStacker';
+
 
 function App() {
   return (
     <div className="App">
-      <h1> Burger Stacker</h1>
+      <BurgerStacker />
     </div>
   );
 }
