@@ -7,7 +7,11 @@ export default class BurgerPane extends Component {
 
         let burgerBits = ingredients.map((ing, i) => (
             <li key={i}>
-                <Ingredient ingredient={ing} />
+                <Ingredient
+                    ingredient={ing}
+                    itemKey={i}
+                    clickFunc={this.props.remove}
+                />
             </li>
         ))
 
@@ -17,6 +21,7 @@ export default class BurgerPane extends Component {
                 <ul>
                     {burgerBits}
                 </ul>
+                <button onClick={this.props.clear}>Clear Burger</button>
             </section>
         )
     }

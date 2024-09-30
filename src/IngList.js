@@ -13,6 +13,7 @@ export default class IngList extends Component {
                 <Ingredient
                     ingredient={ing}
                     clickFunc={add}
+                    itemKey={i}
                 />
             </li>
         ))

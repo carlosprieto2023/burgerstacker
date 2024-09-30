@@ -10,6 +10,7 @@ export default class Ingredient extends Component {
             <p
                 style={{ backgroundColor: color }}
                 onClick={this.props.clickFunc}
+                id={this.props.itemKey}
             >
                 {name}
             </p>
